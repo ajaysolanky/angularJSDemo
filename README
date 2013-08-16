@@ -1,0 +1,8 @@
+This is a demo of Angular JS. Some key features:
+
+-Stopwatch with start/stop ability
+-Ability to type in a name and save the time
+-A listing of all the saved names with their times, organized by lowest-to-highest time
+-Ability to search through the saved records by filtering the names
+
+NOTE: This app is pretty buggy in places (try pressing the start button multiple times), but that's because I wanted to keep it short and simple for the demo.
