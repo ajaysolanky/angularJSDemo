@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html data-ng-app="StopWatch">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="angular.js@1.0.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js" data-semver="1.0.7"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body data-ng-controller="StopWatchController">
+      {{currTime.data.time}}
+      <button ng-click="currTime.begin()">Start</button>
+      <button ng-click="currTime.end()">Stop</button>
+      </br>
+      <input ng-model="name"/>
+      <button ng-click="save()">Save Time</button>
+      </br>
+      </br>
+      Name: <input ng-model="filter.name"/>
+      <ul>
+        <li ng-repeat="s in currTime.data.saved | filter:filter.name | orderBy:'time'">{{s.time}} - {{s.name}}</li>
+      </ul>
+  </body>
+
+</html>
